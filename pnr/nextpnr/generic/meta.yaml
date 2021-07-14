@@ -29,7 +29,7 @@ requirements:
     - fontconfig [not win]
     - make       [not win]
     - cmake
-    - python 3.7
+    - python <3.9
     - libboost  {{ boost_version }}
     - py-boost  {{ boost_version }}
   host:
@@ -40,7 +40,7 @@ requirements:
     - flex       [not win]
     - pkg-config [not win]
     - patchelf   [linux]
-    - python
+    - python <3.9
     - boost     {{ boost_version }}
     - boost-cpp {{ boost_version }}
     - libboost  {{ boost_version }}
@@ -52,7 +52,7 @@ requirements:
     - libgcc-ng     [linux]
     - libstdcxx-ng  [linux]
     - symbiflow-yosys
-    - python
+    - python <3.9
 
 test:
   commands:

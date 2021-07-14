@@ -25,11 +25,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - python {{ python }}
+    - python <3.9
     - libboost {{ boost }}
     - py-boost {{ boost }}
     - make
-    - symbiflow-yosys
   host:
     - bison
     - boost {{ boost }}
@@ -38,14 +37,13 @@ requirements:
     - flex
     - fontconfig
     - pkg-config
-    - python {{ python }}
+    - python <3.9
     - libboost {{ boost }}
     - py-boost {{ boost }}
   run:
     - libboost {{ boost }}
     - py-boost {{ boost }}
-    - python
-    - symbiflow-yosys
+    - python <3.9
 
 test:
   commands:
