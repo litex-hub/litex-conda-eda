@@ -3,6 +3,7 @@
 #
 # Use `conda-build-prepare` before building for some reasonable version string.
 {% set version = 'v0.0_X_gUNKNOWN' %}
+{% set python_version = PYTHON_VERSION | default('3.7') %}
 
 package:
   name: nextpnr-xilinx
@@ -25,7 +26,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - python <3.9
+    - python {{ python_version }}
     - libboost {{ boost }}
     - py-boost {{ boost }}
     - make
@@ -37,13 +38,13 @@ requirements:
     - flex
     - fontconfig
     - pkg-config
-    - python <3.9
+    - python {{ python_version }}
     - libboost {{ boost }}
     - py-boost {{ boost }}
   run:
     - libboost {{ boost }}
     - py-boost {{ boost }}
-    - python <3.9
+    - python {{ python_version }}
 
 test:
   commands:
