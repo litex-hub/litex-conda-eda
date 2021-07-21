@@ -4,7 +4,7 @@
 # Use `conda-build-prepare` before building for some reasonable version string.
 {% set version = 'v0.0_X_gUNKNOWN' %}
 {% set boost_version = "1.73.*" %}
-{% set python_version = PYTHON_VERSION | default('3.7') %}
+{% set python_version = PYTHON_VERSION | default('3.8') %}
 {% set py_suffix = 'py%s'|format(python_version|replace('.', '')) %}
 
 package:
